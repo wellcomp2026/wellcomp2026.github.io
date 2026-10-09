@@ -5,59 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#157878" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Program | WellComp 2026</title>
+    <meta name="description" content="Full-day program for WellComp 2026 at UbiComp/ISWC 2026: keynotes, paper sessions, and panel discussion on October 12, 2026 in Shanghai." />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
     <link rel="stylesheet" href="./assets/css/style.css?v=" />
+    <link rel="stylesheet" href="./assets/css/site.css?v=2026-10" />
 
-    <style type="text/css">
+    <style>
+      .program-facts {
+        margin-bottom: 1.5rem;
+      }
       .tg {
-        border-collapse: collapse;
+        border-collapse: separate;
         border-spacing: 0;
-        width: 100%; /* Make the table take full width of its container */
-      }
-      .tg td, .tg th {
-        font-family: Arial, sans-serif;
-        font-size: 16px; /* Slightly adjusted font size */
+        width: 100%;
+        margin-bottom: 1.75rem;
+        font-size: 0.95rem;
+        line-height: 1.45;
+        border: 1px solid #e3e6e8;
+        border-radius: 10px;
         overflow: hidden;
-        padding: 10px 10px; /* Adjusted padding */
-        word-break: normal;
-        vertical-align: top; /* Ensure vertical alignment */
       }
-      .tg td:first-child, .tg th:first-child {
-        width: 180px; /* Set width for Time column */
-        min-width: 180px;
+      .tg td {
+        padding: 0.6rem 0.9rem;
+        vertical-align: top;
+        text-align: left;
+        border-top: 1px solid #eef1f2;
+      }
+      .tg tr:first-child td {
+        border-top: 0;
+      }
+      .tg td:first-child {
+        width: 118px;
+        min-width: 118px;
         white-space: nowrap;
-        text-align: center !important; /* Center align Time column */
+        color: #606c71;
+        font-size: 0.88rem;
+        font-variant-numeric: tabular-nums;
+        padding-top: 0.7rem;
       }
-      .tg th {
-        background-color: #34cdf9;
-        font-weight: bold;
-        text-align: center;
+      .tg tbody tr:hover td {
+        background-color: #f7fafa;
       }
-      .tg .tg-cly1 {
-        text-align: left;
+      .tg .break td {
+        background-color: #f5f7f7;
+        color: #606c71;
+        font-weight: 600;
       }
-      .tg .tg-wt8g {
-        font-weight: bold;
-        text-align: center;
+      .tg a {
+        color: #157878;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: #9fcaca;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
       }
-      .tg .tg-0lax {
-        text-align: left;
+      .tg a:hover {
+        color: #0f5c5c;
+        text-decoration-color: #0f5c5c;
       }
-      .tg tr:nth-child(even) {
-        background-color: #f9f9f9; /* Alternate row color */
+      .tg .keynote td {
+        background-color: #f4fafa;
       }
-      .tg tr:hover {
-        background-color: #f1f1f1; /* Hover effect */
+      .tg .keynote td:first-child {
+        box-shadow: inset 3px 0 0 #157878;
+        color: #157878;
+        font-weight: 700;
       }
-      .session-header {
-        background-color: #d9edf7; /* Light blue background for session headers */
-        font-weight: bold;
-        padding: 15px; /* Extra padding for session headers */
-        text-align: center;
+      .tg .panel td {
+        background-color: #fdf8ef;
+      }
+      .tg .panel td:first-child {
+        box-shadow: inset 3px 0 0 #d18b2c;
+        color: #b4731f;
+        font-weight: 700;
+      }
+      .ev {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+      }
+      .ev img {
+        flex: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+      }
+      .ev .avatar-stack {
+        flex: none;
+      }
+      .ev .avatar-stack img {
+        width: 34px;
+        height: 34px;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      }
+      .ev .avatar-stack img + img {
+        margin-left: -10px;
+      }
+      .ev > div {
+        min-width: 0;
+      }
+      .tag {
+        display: inline-block;
+        margin-right: 0.45rem;
+        padding: 0.05rem 0.5rem;
+        border-radius: 999px;
+        background: #157878;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        vertical-align: 0.15em;
+        text-decoration: none;
+      }
+      .tag-panel {
+        background: #d18b2c;
+      }
+      a.tag-session {
+        background: #2f4b6e;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      a.tag-session:hover {
+        background: #1b2a3a;
+        color: #fff;
+      }
+      .break-icon {
+        margin-right: 0.4rem;
+      }
+      .main-content h2::before {
+        content: "";
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        margin-right: 0.55rem;
+        border-radius: 3px;
+        background: #2f4b6e;
+        vertical-align: 0.05em;
+      }
+      .talk-title {
+        display: block;
+        margin-top: 0.1rem;
+        color: #3b454a;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+      .slot {
+        display: inline-block;
+        vertical-align: 0.15em;
+        margin-left: 0.5rem;
+        padding: 0.05rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid #cfe3e3;
+        background: #f0f7f7;
+        color: #157878;
+        font-size: 0.72rem;
+        font-weight: 600;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      .panelists {
+        display: block;
+        margin-top: 0.15rem;
+        font-size: 0.82rem;
+        color: #606c71;
+      }
+      .main-content h2 {
+        margin: 2rem 0 0.75rem;
+        font-size: 1.15rem;
+        padding-bottom: 0.35rem;
+        border-bottom: 1px solid #e3e6e8;
+        scroll-margin-top: 1.5rem;
       }
       .session-info {
-        font-style: italic;
-        margin-bottom: 10px;
-        color: #555;
+        margin: -0.25rem 0 0.9rem;
+        font-size: 0.88rem;
+        color: #606c71;
+      }
+      @media screen and (max-width: 600px) {
+        .ev {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.4rem;
+        }
+        .ev img {
+          width: 40px;
+          height: 40px;
+        }
+        .tg td:first-child {
+          width: 92px;
+          min-width: 92px;
+          font-size: 0.8rem;
+          padding-left: 0.6rem;
+          padding-right: 0.4rem;
+        }
+        .tg td {
+          padding-left: 0.6rem;
+          padding-right: 0.6rem;
+        }
       }
     </style>
   </head>
@@ -66,205 +217,213 @@
 
     <header class="page-header" role="banner">
       <h1 class="project-name">Computing for Well-being (WellComp 2026)</h1>
-      <h2 class="project-tagline">Workshop at UbiComp/ISWC 2026</h2>
+      <h2 class="project-tagline">Workshop at <a href="https://ubicomp.org/ubicomp-iswc-2026/" target="_blank" rel="noopener">UbiComp/ISWC 2026</a></h2>
 
-      <nav>
+      <nav class="site-nav" aria-label="Site">
         <a href="./index.html" class="btn">Home</a>
         <a href="./cfp.html" class="btn">Call for Papers</a>
         <a href="./organizers.html" class="btn">Organizers</a>
         <a href="./speakers.html" class="btn">Speakers</a>
         <a href="./committee.html" class="btn">Program Committee</a>
-        <a href="./schedule.html" class="btn">Program</a>
+        <a href="./schedule.html" class="btn" aria-current="page">Program</a>
         <a href="./papers.html" class="btn">Accepted Papers</a>
       </nav>
     </header>
 
     <main id="content" class="main-content" role="main">
-      <h1 id="call-for-papers">Program</h1>
+      <h1 id="program">Program</h1>
 
-      <p style="font-size: 1.1em; margin-bottom: 1.5em;">
-        <strong>📍 Venue: </strong> Room 5F, Shanghai International Convention Center (SICC), Shanghai, China
-      </p>
+      <div class="facts dates program-facts">
+        <div class="fact">
+          <span class="fact-icon">📅</span>
+          <div><span class="fact-label">Date</span><span class="fact-value">October 12, 2026</span></div>
+        </div>
+        <div class="fact">
+          <span class="fact-icon">⏰</span>
+          <div><span class="fact-label">Time</span><span class="fact-value">08:00 – 17:30</span></div>
+        </div>
+        <div class="fact">
+          <span class="fact-icon">📍</span>
+          <div><span class="fact-label">Venue</span><span class="fact-value">SICC, Shanghai</span></div>
+        </div>
+        <div class="fact">
+          <span class="fact-icon">🚪</span>
+          <div><span class="fact-label">Room</span><span class="fact-value">5F</span></div>
+        </div>
+      </div>
       <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-wt8g">Time</th>
-            <th class="tg-wt8g">Event</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
-            <td class="tg-cly1">08:00 – 08:15</td>
-            <td class="tg-cly1">Welcome &amp; Opening Remarks</td>
+            <td>08:00 – 08:15</td>
+            <td><span class="break-icon">👋</span>Welcome &amp; Opening Remarks</td>
           </tr>
           <tr>
-            <td class="tg-cly1">08:15 – 09:30</td>
-            <td class="tg-cly1">Paper Session 1: Wearable &amp; Mobile Sensing for Personal Health and Well-being</td>
+            <td>08:15 – 09:30</td>
+            <td><a class="tag tag-session" href="./papers.html#session-1">Session 1</a>Wearable &amp; Mobile Sensing for Personal Health and Well-being</td>
           </tr>
-          <tr>
-            <td class="tg-cly1">09:30 – 10:30</td>
-            <td class="tg-cly1">
-              <b>Keynote Talk:</b> <a href="https://users.ece.utexas.edu/~ethomaz/" target="_blank" rel="noopener"><b>Edison Thomaz</b></a> (UT Austin)<br>
-              <i>TechSANS: An X-Ray of a Digital Phenotyping Study</i>
+          <tr class="keynote">
+            <td>09:30 – 10:30</td>
+            <td>
+              <div class="ev">
+                <img src="./assets/images/edisonthomaz.jpeg" alt="" width="48" height="48" />
+                <div>
+                  <span class="tag">Keynote</span><a href="./speakers.html#edison-thomaz">Edison Thomaz</a> (UT Austin)
+                  <span class="talk-title">TechSANS: An X-Ray of a Digital Phenotyping Study</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="break">
+            <td>10:30 – 11:00</td>
+            <td><span class="break-icon">☕</span>Coffee Break</td>
+          </tr>
+          <tr class="keynote">
+            <td>11:00 – 12:00</td>
+            <td>
+              <div class="ev">
+                <img src="./assets/images/yuzheyang.jpg" alt="" width="48" height="48" />
+                <div>
+                  <span class="tag">Keynote</span><a href="./speakers.html#yuzhe-yang">Yuzhe Yang</a> (UCLA / Google)
+                  <span class="talk-title">Multisensory AI for Human Physiology and Personal Health</span>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="tg-cly1 session-header">10:30 – 11:00</td>
-            <td class="tg-cly1 session-header">Coffee Break</td>
+            <td>12:00 – 12:30</td>
+            <td><a class="tag tag-session" href="./papers.html#session-2">Session 2</a>Human-Centered &amp; Ambient Computing for Everyday Well-being</td>
+          </tr>
+          <tr class="break">
+            <td>12:30 – 14:00</td>
+            <td><span class="break-icon">🍽️</span>Lunch and Networking</td>
           </tr>
           <tr>
-            <td class="tg-cly1">11:00 – 12:00</td>
-            <td class="tg-cly1">
-              <b>Keynote Talk:</b> <a href="https://web.cs.ucla.edu/~yuzhe/" target="_blank" rel="noopener"><b>Yuzhe Yang</b></a> (UCLA / Google)<br>
-              <i>Multisensory AI for Human Physiology and Personal Health</i>
+            <td>14:00 – 15:00</td>
+            <td><a class="tag tag-session" href="./papers.html#session-2">Session 2</a>(Contd.) Human-Centered &amp; Ambient Computing for Everyday Well-being</td>
+          </tr>
+          <tr class="panel">
+            <td>15:00 – 16:00</td>
+            <td>
+              <div class="ev">
+                <div class="avatar-stack">
+                  <img src="./assets/images/edisonthomaz.jpeg" alt="" width="34" height="34" />
+                  <img src="./assets/images/uichinlee.jpg" alt="" width="34" height="34" />
+                  <img src="./assets/images/yuntaowang.png" alt="" width="34" height="34" />
+                  <img src="./assets/images/tongxia.png" alt="" width="34" height="34" />
+                </div>
+                <div>
+                  <span class="tag tag-panel">Panel</span><a href="./speakers.html#panelists">Panel Discussion</a>
+                  <span class="talk-title">From Sensing to AI: The Future of Computing for Personal Health and Well-being</span>
+                  <span class="panelists">Panelists: Edison Thomaz · Uichin Lee · Yuntao Wang · Tong Xia</span>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="tg-cly1">12:00 – 12:30</td>
-            <td class="tg-cly1">Paper Session 2: Human-Centered &amp; Ambient Computing for Everyday Well-being</td>
+            <td>16:00 – 17:15</td>
+            <td><a class="tag tag-session" href="./papers.html#session-3">Session 3</a>Trustworthy &amp; Adaptive AI for Health and Well-being</td>
           </tr>
           <tr>
-            <td class="tg-cly1 session-header">12:30 – 14:00</td>
-            <td class="tg-cly1 session-header">Lunch and Networking</td>
-          </tr>
-          <tr>
-            <td class="tg-0lax">14:00 – 15:00</td>
-            <td class="tg-0lax">Paper Session 2 (Contd.): Human-Centered &amp; Ambient Computing for Everyday Well-being</td>
-          </tr>
-          <tr>
-            <td class="tg-0lax">15:00 – 16:00</td>
-            <td class="tg-0lax">
-              <b>Panel Discussion</b><br>
-              <i>From Sensing to AI: The Future of Computing for Personal Health and Well-being</i>
-            </td>
-          </tr>
-          <tr>
-            <td class="tg-0lax">16:00 – 17:15</td>
-            <td class="tg-0lax">Paper Session 3: Trustworthy &amp; Adaptive AI for Health and Well-being</td>
-          </tr>
-          <tr>
-            <td class="tg-0lax">17:15 – 17:30</td>
-            <td class="tg-0lax">Best Paper Awards &amp; Closing Remarks</td>
-          </tr>
-          <!-- <tr>
-            <td colspan="2" class="session-header" style="color: red;">17:15–17:30 &nbsp; Best Paper Awards &amp; Closing Remarks</td>
-          </tr> -->
-        </tbody>
-      </table>
-
-      <h3>Paper Session 1: Wearable &amp; Mobile Sensing for Personal Health and Well-being</h3>
-      <p class="session-info">
-        Each paper will be presented for a total of 14 minutes (11 minutes presentation + 3 minutes Q&amp;A)
-      </p>
-      <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-wt8g">Time</th>
-            <th class="tg-wt8g">Paper Title</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tg-cly1">08:15 – 08:29</td>
-            <td class="tg-0lax">Toward Smartphone-Based Posture Awareness for Physical Well-being under Everyday-Use Conditions</td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">08:30 – 08:44</td>
-            <td class="tg-0lax">Can we Evaluate Knee Joint Load from the Kinematics of Other Body Parts during Gait?</td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">08:45 – 08:59</td>
-            <td class="tg-0lax">Smartwatch-Based Chopstick Eating Activities Recognition Using Smartphone-Assisted Labeling</td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">09:00 – 09:14</td>
-            <td class="tg-0lax">Oto-Meal: Earable Sensing with PPG and IMU for Personalized Meal Awareness</td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">09:15 – 09:29</td>
-            <td class="tg-0lax">Indoor-Outdoor Classification Using Consumer Smartwatch Ambient Light Sensors in Everyday Environments</td>
+            <td>17:15 – 17:30</td>
+            <td><span class="break-icon">🏆</span>Best Paper Awards &amp; Closing Remarks</td>
           </tr>
         </tbody>
       </table>
 
-      <h3>Paper Session 2: Human-Centered &amp; Ambient Computing for Everyday Well-being</h3>
+      <h2 id="session-1">Session 1: Wearable &amp; Mobile Sensing for Personal Health and Well-being <span class="slot">08:15 – 09:30</span></h2>
       <p class="session-info">
         Each paper will be presented for a total of 14 minutes (11 minutes presentation + 3 minutes Q&amp;A)
       </p>
       <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-wt8g">Time</th>
-            <th class="tg-wt8g">Paper Title</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
-            <td class="tg-cly1">12:00 – 12:14</td>
-            <td class="tg-0lax">When Should I Poke You? Predicting Opportune Moments for Mobile Interventions Using Passive Sensing</td>
+            <td>08:15 – 08:29</td>
+            <td>Toward Smartphone-Based Posture Awareness for Physical Well-being under Everyday-Use Conditions</td>
           </tr>
           <tr>
-            <td class="tg-cly1">12:15 – 12:29</td>
-            <td class="tg-0lax">Supporting Couples' Social Well-being in Daily Life: A Needs Assessment and Co-design with Co-located Couples</td>
+            <td>08:30 – 08:44</td>
+            <td>Can we Evaluate Knee Joint Load from the Kinematics of Other Body Parts during Gait?</td>
           </tr>
           <tr>
-            <td class="tg-cly1 session-header">12:30 – 14:00</td>
-            <td class="tg-cly1 session-header">Lunch and Networking</td>
+            <td>08:45 – 08:59</td>
+            <td>Smartwatch-Based Chopstick Eating Activities Recognition Using Smartphone-Assisted Labeling</td>
           </tr>
           <tr>
-            <td class="tg-cly1">14:00 – 14:14</td>
-            <td class="tg-0lax">Noisync: Noise-Aware Schedule Coordination for Multi-Family Housing</td>
+            <td>09:00 – 09:14</td>
+            <td>Oto-Meal: Earable Sensing with PPG and IMU for Personalized Meal Awareness</td>
           </tr>
           <tr>
-            <td class="tg-cly1">14:15 – 14:29</td>
-            <td class="tg-0lax">Predicting Family Educational Climate from Naturalistic Audio Sensing of Parent–Child Homework Interactions</td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">14:30 – 14:44</td>
-            <td class="tg-0lax">CallSense: Sensing Call Engagement in Privacy-Constrained Call Center Environment with Commodity Smartwatches</td>
-          </tr>
-          <tr>
-            <td class="tg-cly1">14:45 – 14:59</td>
-            <td class="tg-0lax">Space Enhanced ReID: Fast and Discriminative Person Search for Ambient Assisted Living</td>
+            <td>09:15 – 09:29</td>
+            <td>Indoor-Outdoor Classification Using Consumer Smartwatch Ambient Light Sensors in Everyday Environments</td>
           </tr>
         </tbody>
       </table>
 
-      <h3>Paper Session 3: Trustworthy &amp; Adaptive AI for Health and Well-being</h3>
-      <p class="session-info">
-        Each paper will be presented for a total of 14 minutes (11 minutes presentation + 3 minutes Q&amp;A)
-      </p>
+      <h2 id="session-2">Session 2: Human-Centered &amp; Ambient Computing for Everyday Well-being <span class="slot">12:00 – 12:30 · 14:00 – 15:00</span></h2>
       <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-wt8g">Time</th>
-            <th class="tg-wt8g">Paper Title</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
-            <td class="tg-cly1">16:00 – 16:14</td>
-            <td class="tg-0lax">ReliaGate: Reliability Routing for Low-Stakes Wearable Stress Prediction</td>
+            <td>12:00 – 12:14</td>
+            <td>When Should I Poke You? Predicting Opportune Moments for Mobile Interventions Using Passive Sensing</td>
           </tr>
           <tr>
-            <td class="tg-cly1">16:15 – 16:29</td>
-            <td class="tg-0lax">Towards Trustworthy Agentic AI for Automated Wearable-Based Health Monitoring</td>
+            <td>12:15 – 12:29</td>
+            <td>Supporting Couples' Social Well-being in Daily Life: A Needs Assessment and Co-design with Co-located Couples</td>
+          </tr>
+          <tr class="break">
+            <td>12:30 – 14:00</td>
+            <td><span class="break-icon">🍽️</span>Lunch and Networking</td>
           </tr>
           <tr>
-            <td class="tg-cly1">16:30 – 16:44</td>
-            <td class="tg-0lax">A Triangulate-and-Audit Framework for Measuring Depression-Indicative Self-Disclosure in YouTube Comments</td>
+            <td>14:00 – 14:14</td>
+            <td>Noisync: Noise-Aware Schedule Coordination for Multi-Family Housing</td>
           </tr>
           <tr>
-            <td class="tg-cly1">16:45 – 16:59</td>
-            <td class="tg-0lax">Hallucinate or Omit? Safety Trade-offs in LLM-Generated Health Interpretations from Wearable Data</td>
+            <td>14:15 – 14:29</td>
+            <td>Predicting Family Educational Climate from Naturalistic Audio Sensing of Parent–Child Homework Interactions</td>
           </tr>
           <tr>
-            <td class="tg-cly1">17:00 – 17:14</td>
-            <td class="tg-0lax">Protocol-Aware Test-Time Adaptation: Characterizing Stream Structure and Batch Normalization in Wearable Emotion Recognition</td>
+            <td>14:30 – 14:44</td>
+            <td>CallSense: Sensing Call Engagement in Privacy-Constrained Call Center Environment with Commodity Smartwatches</td>
+          </tr>
+          <tr>
+            <td>14:45 – 14:59</td>
+            <td>Space Enhanced ReID: Fast and Discriminative Person Search for Ambient Assisted Living</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="session-3">Session 3: Trustworthy &amp; Adaptive AI for Health and Well-being <span class="slot">16:00 – 17:15</span></h2>
+      <table class="tg">
+        <tbody>
+          <tr>
+            <td>16:00 – 16:14</td>
+            <td>ReliaGate: Reliability Routing for Low-Stakes Wearable Stress Prediction</td>
+          </tr>
+          <tr>
+            <td>16:15 – 16:29</td>
+            <td>Towards Trustworthy Agentic AI for Automated Wearable-Based Health Monitoring</td>
+          </tr>
+          <tr>
+            <td>16:30 – 16:44</td>
+            <td>A Triangulate-and-Audit Framework for Measuring Depression-Indicative Self-Disclosure in YouTube Comments</td>
+          </tr>
+          <tr>
+            <td>16:45 – 16:59</td>
+            <td>Hallucinate or Omit? Safety Trade-offs in LLM-Generated Health Interpretations from Wearable Data</td>
+          </tr>
+          <tr>
+            <td>17:00 – 17:14</td>
+            <td>Protocol-Aware Test-Time Adaptation: Characterizing Stream Structure and Batch Normalization in Wearable Emotion Recognition</td>
           </tr>
         </tbody>
       </table>
 
     </main>
+
+    <footer class="site-footer">
+      <p>WellComp 2026 · Workshop at <a href="https://ubicomp.org/ubicomp-iswc-2026/" target="_blank" rel="noopener">UbiComp/ISWC 2026</a>, Shanghai, China</p>
+      <p>Questions? <a href="mailto:gauthamkrishna@utexas.edu">gauthamkrishna@utexas.edu</a></p>
+    </footer>
   </body>
 </html>

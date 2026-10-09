@@ -10,19 +10,226 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <title>Speakers | WellComp 2026</title>
+    <meta name="description" content="Keynote speakers and panelists at WellComp 2026, the Computing for Well-being workshop at UbiComp/ISWC 2026." />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
     <link rel="stylesheet" href="./assets/css/style.css?v=" />
+    <link rel="stylesheet" href="./assets/css/site.css?v=2026-10" />
     <style>
+      /* Keynote speakers */
+      .speaker-info {
+        display: flow-root;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #e3e6e8;
+      }
+      .speaker-info:first-of-type {
+        padding-top: 0.25rem;
+      }
+      .speaker-info:last-of-type {
+        border-bottom: 0;
+      }
+      .speaker-info,
+      .panel-section {
+        scroll-margin-top: 1.5rem;
+      }
+      .speaker-details h2 a {
+        text-decoration: none;
+      }
+      .speaker-details h2 a:hover {
+        text-decoration: underline;
+      }
+      .speaker-image {
+        float: left;
+        width: 160px;
+        margin: 0.25rem 1.5rem 0.5rem 0;
+      }
+      .speaker-image img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      }
+      .speaker-details {
+        min-width: 0;
+      }
+      .speaker-bio {
+        clear: left;
+      }
+      .speaker-details h2 {
+        margin: 0 0 0.2rem;
+        font-size: 1.4rem;
+      }
+      .speaker-details h2 a {
+        color: #1b2a3a;
+      }
+      .speaker-details h2 a:hover {
+        color: #157878;
+      }
+      .speaker-affiliation {
+        margin: 0 0 0.6rem;
+        font-size: 0.95rem;
+        color: #606c71;
+      }
+      .speaker-talk {
+        margin: 0 0 1rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.35;
+        color: #157878;
+      }
+      .speaker-label {
+        display: block;
+        margin: 0 0 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8a949a;
+      }
+      .speaker-abstract {
+        margin: 0 0 0.6rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #3b454a;
+        text-wrap: pretty;
+      }
+      .slot {
+        display: inline-block;
+        vertical-align: 0.15em;
+        margin-left: 0.4rem;
+        padding: 0.1rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid #cfe3e3;
+        background: #f0f7f7;
+        color: #157878;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        text-decoration: none;
+        font-variant-numeric: tabular-nums;
+      }
+      .slot:hover {
+        background: #157878;
+        color: #fff;
+        text-decoration: none;
+      }
+      .speaker-bio {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #4a5357;
+      }
+      .speaker-bio summary {
+        cursor: pointer;
+        font-weight: 700;
+        color: #157878;
+        list-style: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .speaker-bio summary::-webkit-details-marker {
+        display: none;
+      }
+      .speaker-bio summary:hover {
+        text-decoration: underline;
+      }
+      .speaker-bio summary:focus-visible,
+      .panelist-name a:focus-visible {
+        outline: 2px solid #157878;
+        outline-offset: 3px;
+        border-radius: 3px;
+      }
+      .speaker-bio summary::before {
+        content: "\25B8";
+        font-size: 0.8em;
+      }
+      .speaker-bio[open] summary::before {
+        content: "\25BE";
+      }
+      .speaker-bio p {
+        margin: 0.5rem 0 0;
+      }
       @media screen and (max-width: 600px) {
-        .speaker-info {
-          flex-direction: column;
-        }
         .speaker-image {
-          width: 100%;
-          max-width: 300px;
-          margin: 0 auto 1rem;
+          float: none;
+          width: 160px;
+          margin: 0 0 1rem;
         }
-        .speaker-details {
-          width: 100%;
+      }
+
+      /* Panel discussion */
+      .panel-section {
+        margin-top: 2rem;
+      }
+      .panel-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.35;
+        color: #157878;
+        text-align: center;
+        margin: 0 0 2rem;
+      }
+      .panel-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.25rem;
+        max-width: 760px;
+        margin: 0 auto;
+        align-items: start;
+      }
+      .panelist {
+        text-align: center;
+      }
+      .panelist img {
+        display: block;
+        width: 100%;
+        max-width: 160px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 10px;
+        margin: 0 auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .panelist:hover img {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+      }
+      .panelist-name {
+        margin: 0.6rem 0 0.1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .panelist-name a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .panelist-name a:hover {
+        color: #157878;
+        text-decoration: underline;
+      }
+      .panelist-affiliation {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.3;
+        color: #606c71;
+      }
+      @media screen and (max-width: 800px) {
+        .panel-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          max-width: 480px;
+        }
+      }
+      @media screen and (max-width: 420px) {
+        .panel-grid {
+          grid-template-columns: 1fr;
+          max-width: 220px;
         }
       }
     </style>
@@ -32,120 +239,94 @@
 
     <header class="page-header" role="banner">
       <h1 class="project-name">Computing for Well-being (WellComp 2026)</h1>
-      <h2 class="project-tagline">Workshop at UbiComp/ISWC 2026</h2>
+      <h2 class="project-tagline">Workshop at <a href="https://ubicomp.org/ubicomp-iswc-2026/" target="_blank" rel="noopener">UbiComp/ISWC 2026</a></h2>
 
-      <a href="./index.html" class="btn">Home</a>
-
-      <a href="./cfp.html" class="btn">Call for Papers</a>
-
-      <a href="./organizers.html" class="btn">Organizers</a>
-
-      <a href="./speakers.html" class="btn">Speakers</a>
-
-      <a href="./committee.html" class="btn">Program Committee</a>
-
-     <a href="./schedule.html" class="btn">Program</a>
-
-      <a href="./papers.html" class="btn">Accepted Papers</a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="./index.html" class="btn">Home</a>
+        <a href="./cfp.html" class="btn">Call for Papers</a>
+        <a href="./organizers.html" class="btn">Organizers</a>
+        <a href="./speakers.html" class="btn" aria-current="page">Speakers</a>
+        <a href="./committee.html" class="btn">Program Committee</a>
+        <a href="./schedule.html" class="btn">Program</a>
+        <a href="./papers.html" class="btn">Accepted Papers</a>
+      </nav>
     </header>
 
     <main id="content" class="main-content" role="main">
-      <h1 id="call-for-papers">Keynote Speakers</h1>
+      <div class="page-title">
+        <h1 id="keynotes">Keynote Speakers</h1>
+        <a class="pill-link" href="wellcomp2026_speakers_poster.png" target="_blank" rel="noopener">Speakers flyer ↗</a>
+      </div>
 
-      <div class="speaker-info" style="display: flex; align-items: flex-start; margin-bottom: 2rem;">
-        <div class="speaker-image" style="flex: 0 0 300px; margin-right: 2rem;">
-          <img src="./assets/images/edisonthomaz.jpeg" alt="Edison Thomaz" style="width: 100%; max-width: 300px; border-radius: 8px;" />
+      <div class="speaker-info" id="edison-thomaz">
+        <div class="speaker-image">
+          <img src="./assets/images/edisonthomaz.jpeg" alt="Edison Thomaz" />
         </div>
-        <div class="speaker-details" style="flex: 1;">
+        <div class="speaker-details">
           <h2><a href="https://users.ece.utexas.edu/~ethomaz/" target="_blank" rel="noopener">Edison Thomaz</a></h2>
-          <p>The University of Texas at Austin</p>
-          <p><b>Title:</b> TechSANS: An X-Ray of a Digital Phenotyping Study</p>
-          <p style="text-align: justify;"><b>Abstract:</b> Digital phenotyping promises to transform how we understand health and disease by continuously and unobtrusively measuring behavior in everyday life. In this talk, I will provide an inside look at TechSANS, a longitudinal study exploring whether passive data from smartphones and wearable devices can reveal changes in cognitive function among older adults. Using TechSANS as a case study, I will trace the path from sensing and data collection to digital measures and machine learning models, highlighting findings involving behaviors such as gait, smartphone typing, and daily routines. Along the way, I will discuss some of the less visible challenges of conducting this research in the real world, including missing data, technology failures, privacy concerns, and participant burden. The talk will offer both a view of the potential of digital phenotyping and a practical perspective on what it takes to make it work.</p>
-          <p style="text-align: justify;"><b>Bio:</b> Edison Thomaz is an Associate Professor and William H. Hartwig Fellow in the Chandra Family Department of Electrical and Computer Engineering at UT Austin, where he directs the Human Signals Lab. His research develops novel sensing platforms and AI/ML methods to characterize health and disease from multimodal behavioral data. His work has been published in leading venues spanning ubiquitous computing, human-computer interaction, and digital health, including ACM IMWUT/UbiComp, CHI, and biomedical and health informatics venues. Thomaz is an Editor of the ACM Proceedings on Interactive, Mobile, Wearable and Ubiquitous Technologies (PACM IMWUT) and serves as Steering Committee Chair of the UbiComp conference. He holds a bachelor's degree in Computer Science from UT Austin, a master's from the MIT Media Lab, and a Ph.D. in Human-Centered Computing from Georgia Tech.<br>
-          </p>
+          <p class="speaker-affiliation">The University of Texas at Austin</p>
+          <p class="speaker-talk">TechSANS: An X-Ray of a Digital Phenotyping Study <a class="slot" href="./schedule.html">09:30 – 10:30</a></p>
+          <p class="speaker-abstract"><span class="speaker-label">Abstract</span>Digital phenotyping promises to transform how we understand health and disease by continuously and unobtrusively measuring behavior in everyday life. In this talk, I will provide an inside look at TechSANS, a longitudinal study exploring whether passive data from smartphones and wearable devices can reveal changes in cognitive function among older adults. Using TechSANS as a case study, I will trace the path from sensing and data collection to digital measures and machine learning models, highlighting findings involving behaviors such as gait, smartphone typing, and daily routines. Along the way, I will discuss some of the less visible challenges of conducting this research in the real world, including missing data, technology failures, privacy concerns, and participant burden. The talk will offer both a view of the potential of digital phenotyping and a practical perspective on what it takes to make it work.</p>
+          <details class="speaker-bio">
+            <summary>Read bio</summary>
+            <p>Edison Thomaz is an Associate Professor and William H. Hartwig Fellow in the Chandra Family Department of Electrical and Computer Engineering at UT Austin, where he directs the Human Signals Lab. His research develops novel sensing platforms and AI/ML methods to characterize health and disease from multimodal behavioral data. His work has been published in leading venues spanning ubiquitous computing, human-computer interaction, and digital health, including ACM IMWUT/UbiComp, CHI, and biomedical and health informatics venues. Thomaz is an Editor of the ACM Proceedings on Interactive, Mobile, Wearable and Ubiquitous Technologies (PACM IMWUT) and serves as Steering Committee Chair of the UbiComp conference. He holds a bachelor's degree in Computer Science from UT Austin, a master's from the MIT Media Lab, and a Ph.D. in Human-Centered Computing from Georgia Tech.</p>
+          </details>
         </div>
       </div>
 
-      <div class="speaker-info" style="display: flex; align-items: flex-start; margin-bottom: 2rem;">
-        <div class="speaker-image" style="flex: 0 0 300px; margin-right: 2rem;">
-          <img src="./assets/images/yuzheyang.jpg" alt="Yuzhe Yang" style="width: 100%; max-width: 300px; border-radius: 8px;" />
+      <div class="speaker-info" id="yuzhe-yang">
+        <div class="speaker-image">
+          <img src="./assets/images/yuzheyang.jpg" alt="Yuzhe Yang" />
         </div>
-        <div class="speaker-details" style="flex: 1;">
+        <div class="speaker-details">
           <h2><a href="https://web.cs.ucla.edu/~yuzhe/" target="_blank" rel="noopener">Yuzhe Yang</a></h2>
-          <p>University of California, Los Angeles / Google</p>
-          <p><b>Title:</b> Multisensory AI for Human Physiology and Personal Health</p>
-          <p style="text-align: justify;"><b>Abstract:</b> Human physiology is becoming a new frontier for general-purpose AI. Unlike text and images, physiological signals are continuous, multimodal, and shaped by both short-term dynamics and long-term health trajectories. In this talk, I will present our recent work on foundation models and language-grounded understanding of sleep physiology. I will then discuss AI for metabolic health, including foundation models for continuous glucose monitoring and multimodal assessment of metabolic risk using wearables. Finally, I will cover health reasoning and agentic AI for physiological time series, together with a broader vision for AI systems that can interpret, reason over, communicate about, and support action on personal health.</p>
-          <p style="text-align: justify;"><b>Bio:</b> Yuzhe Yang is an Assistant Professor at UCLA, and a visiting faculty researcher at Google. He received his PhD in Computer Science at MIT. His research interests include machine learning and AI for health. His research has been published in Nature, Nature Medicine, Science Translational Medicine, NeurIPS, ICML, and ICLR, and featured in media outlets such as WSJ, Forbes, and BBC. His work has been recognized by Rising Stars in AI and Data Science, AMIA Doctoral Dissertation Award, and Forbes 30 Under 30.<br>
-          </p>
-        </div>
-      </div>
-      
-      <!-- <div class="speaker-info" style="display: flex; align-items: flex-start; margin-bottom: 2rem;">
-        <div class="speaker-image" style="flex: 0 0 300px; margin-right: 2rem;">
-          <img src="./assets/images/kvl.jpeg" alt="Kristof Van Laerhoven" style="width: 100%; max-width: 300px; border-radius: 8px;" />
-        </div>
-        <div class="speaker-details" style="flex: 1;">
-          <h2><a href="https://ubi29.informatik.uni-siegen.de/usi/team_kvl.html" target="_blank" rel="noopener">Kristof Van Laerhoven</a></h2>
-          <p>University of Siegen</p>
-          <p><b>Title:</b> The Data Dilemma in Designing Low-Cost, High-Precision Wearables for Users’ Wellness Tracking</p>
-          <p style="text-align: justify;"><b>Abstract:</b> When designing wearables for individuals’ everyday wellness tracking, balancing device affordability with the need for accurate and privacy-preserving interpretation of sensor data is key. I will address in this talk recent works that directly address this by exploring strategies that span sensor design, data annotation, multimodal fusion, and privacy-aware processing. Own work on wearable sensing such as DeepPPG, WESAD, or WEAR illustrate the impact that sensor-specific methods can have, while studies in (federated) fitness tracking, hand washing, or epilepsy seizure detection show the challenges and promises in actual deployments. I’ll finally show some hands-on examples of embedded wearable platforms and the importance of open-source, reproducible tools.</p>
-          <p style="text-align: justify;"><b>Bio:</b> Kristof is a professor for Ubiquitous Computing at the University of Siegen (in Germany) and interested for a long time in wearable and embedded sensing systems research, as well as activity and affect recognition. After his studies in Brussels, Belgium, he obtained his PhD with Hans Gellersen at Lancaster University (UK) and after a PostDoc with Bernt Schiele at the Technical University of Darmstadt (Germany), obtained an Emmy Noether Research grant, after which he became a professor for embedded systems at the University of Freiburg (Germany). He was recently co-chair of UbiComp/ISWC 2023, has in the past chaired the ISWC Steering Committee, and currently is an Editor for the ACM IMWUT journal.<br>
-          More information on: <a href="https://ubicomp.eti.uni-siegen.de" target="_blank" rel="noopener">https://ubicomp.eti.uni-siegen.de</a>
-          </p>
-        </div>
-      </div>
-      
-      
-      <div class="speaker-info" style="display: flex; align-items: flex-start; margin-bottom: 2rem;">
-        <div class="speaker-image" style="flex: 0 0 300px; margin-right: 2rem;">
-          <img src="https://cs.nankai.edu.cn/__local/D/A0/BA/519DA5AB1816BAFE64EF7A73392_CF44E098_39A15.jpg" alt="Haining Zhang" style="width: 100%; max-width: 300px; border-radius: 8px;" />
-        </div>
-        <div class="speaker-details" style="flex: 1;">
-          <h2><a href="https://cs.nankai.edu.cn/info/1084/1127.htm" target="_blank" rel="noopener">Haining Zhang</a></h2>
-          <p>Nankai University</p>
-          <p><b>Title:</b> User Experience Measurement and Innovation in Consumer Products</p>
-          <p style="text-align: justify;"><b>Abstract:</b> User experience is a key success factor for consumer products. However, there has been lacking a mathematical computation model for user experience measurement. The research on the impacting factors of user experience and the construction of a measurement model are highly desired by the consumer devices and internet services Industry. Meanwhile, creativity and innovation are regarded extremely critical in achieving great user experience. This keynote will discuss how to measure the user experience of a product and the best practices leading to customer satisfaction.</p>
-          <p style="text-align: justify;"><b>Bio:</b> Haining Zhang is the Dean and Chair Professor of Software College at Nankai University as well as the Director of Tianjin Key Lab of Software Experience and Human-Computer Interaction. His main research interests include software user experience, AI applications and Human Computer Interaction. Prior to his teaching career, Haining spent 27 years in Internet and smartphone industry with 14 years at Apple in US serving as software development director and the head of R&D for greater China. He has been granted more than 40 US invention patents and involved in multiple iPhone and iOS development projects.<br>
-          More information on: <BR> 
-          <a href="https://cs.nankai.edu.cn/info/1084/1127.htm" target="_blank" rel="noopener">https://cs.nankai.edu.cn/info/1084/1127.htm</a>
-          </p>
+          <p class="speaker-affiliation">University of California, Los Angeles / Google</p>
+          <p class="speaker-talk">Multisensory AI for Human Physiology and Personal Health <a class="slot" href="./schedule.html">11:00 – 12:00</a></p>
+          <p class="speaker-abstract"><span class="speaker-label">Abstract</span>Human physiology is becoming a new frontier for general-purpose AI. Unlike text and images, physiological signals are continuous, multimodal, and shaped by both short-term dynamics and long-term health trajectories. In this talk, I will present our recent work on foundation models and language-grounded understanding of sleep physiology. I will then discuss AI for metabolic health, including foundation models for continuous glucose monitoring and multimodal assessment of metabolic risk using wearables. Finally, I will cover health reasoning and agentic AI for physiological time series, together with a broader vision for AI systems that can interpret, reason over, communicate about, and support action on personal health.</p>
+          <details class="speaker-bio">
+            <summary>Read bio</summary>
+            <p>Yuzhe Yang is an Assistant Professor at UCLA, and a visiting faculty researcher at Google. He received his PhD in Computer Science at MIT. His research interests include machine learning and AI for health. His research has been published in Nature, Nature Medicine, Science Translational Medicine, NeurIPS, ICML, and ICLR, and featured in media outlets such as WSJ, Forbes, and BBC. His work has been recognized by Rising Stars in AI and Data Science, AMIA Doctoral Dissertation Award, and Forbes 30 Under 30.</p>
+          </details>
         </div>
       </div>
 
-      <div class="speaker-info">
-        <div class="speaker-image">
-          <img src="./assets/images/TPloetz_cropped2.jpeg" alt="Thomas Ploetz" style="width: 100%; max-width: 300px;" />
-        </div>
-        <div class="speaker-details">
-          <h2><a href="https://www.cc.gatech.edu/people/thomas-ploetz">Thomas Ploetz</a></h2>
-          <p>Georgia Institute of Technology</p>
-          <p><b>Title:</b> Computational Behavior Analysis for Wellbeing Assessments — Smart Entities (Devices, Algorithms, Humans) are Pushing the Boundaries of Digital Health.</p>
-          <p><b>Abstract:</b> Many aspects of both mental and physical wellbeing are linked to a human's behavior and activities, i.e., what a person is doing and when, and how this changes over time. As such, human activity recognition using wearable and other pervasive sensing methods (HAR) is a pillar of mobile and ubiquitous computing based, out-of-clinic wellbeing assessments in various shapes and forms. Alas, recognizing what a person does is—to this day—a non-trivial endeavor due to the underlying analysis of multi-variate, noisy sensor data, which constitutes a formidable machine learning problem that the research community has been tackling.
-          
-          In this talk I will first summarize what makes HAR a hard machine learning problem and then discuss how recent technological breakthroughs can help to get closer to solving it. I will focus on opportunities to overcome data scarcity through cross-modality transfer, and self-supervised learning. I will then delve into some of the wellbeing assessments that my lab has been doing in areas such as Parkinson's assessment, automated analysis of eating behavior as proxy for mental wellbeing assessments, and recent work in behavior assessments for people with mild cognitive impairments.
-            
-          Finally, I will explore some more foundational thoughts on how we (should) characterize activities and behaviors and how language learning may help us to develop a more systematic and thus robust and generalizable understanding of human activities. I argue that human activities follow concepts that are similar to those of natural languages and as such these can be learnt, which will lead to improved modeling as well as analysis — as it is of importance, for example, for many medical applications.
-         </p>
-         <p style="text-align: justify;"><b>Bio:</b> Thomas Ploetz is a Computer Scientist with expertise and almost two decades of experience in Pattern Recognition and Machine Learning research (PhD from Bielefeld University, Germany). He works as a Professor of Computing at the School of Interactive Computing at the Georgia Institute of Technology in Atlanta, USA. His research agenda focuses on applied machine learning, that is developing systems and innovative sensor data analysis methods for real world applications. Primary application domain for his work is computational behavior analysis where he develops methods for automated and objective behavior assessments in naturalistic environments, thereby making opportunistic use of ubiquitous and wearable sensing methods. Main driving functions for his work are "in the wild" deployments and as such the development of systems and methods that have a real impact on people's lives.
-          
-          Thomas has been very active in the mobile and ubiquitous, including wearable computing community. He is co-editor in chief of the Proc. of the ACM on Interactive, Mobile, Wearable, and Ubiquitous computing technology (IMWUT), has twice been co-chair of the technical program committee of the International Symposium on Wearable Computing (ISWC), and was general co-chair of the 2022 Int. Joint Conf. On Pervasive and Ubiquitous Computing (Ubicomp). Thomas is a Distinguished Member of the ACM. More info <a href="http://thomasploetz.de">here</a>. </p>
+      <section class="panel-section">
+        <h1 id="panelists">Panel Discussion</h1>
 
-      </div>
+        <p class="panel-title">From Sensing to AI: The Future of Computing for Personal Health and Well-being <a class="slot" href="./schedule.html">15:00 – 16:00</a></p>
 
-      <div class="speaker-info">
-        <div class="speaker-image">
-          <img src="./assets/images/yuntaowang.png" alt="Yuntao Wang" style="width: 100%; max-width: 300px;" />
-        </div>
-        <div class="speaker-details">
-          <h2><a href="https://pi.cs.tsinghua.edu.cn/lab/people/YuntaoWang/en/">Yuntao Wang</a></h2>
-          <p>Tsinghua University</p>
-          <p><strong>Title</strong>: <b>Enabling Continuous Physiological Sensing on Ubiquitous Devices</b></p>
-          <p style="text-align: justify;"><b>Abstract:</b> Personal health monitoring plays a pivotal role in reflecting lifestyle habits, detecting physical abnormalities, and tracking medical conditions and recovery statuses, thereby offering significant value for overall wellbeing. It is essential for integrating user-friendly and easily accessible healthcare services both inside and outside medical facilities, making it a key research area in human-computer interaction and ubiquitous computing. Traditionally, this field has relied heavily on medical-grade devices to collect physiological data, which are not only costly but also offer limited scalability, thus hindering their widespread use. This presentation will showcase our latest research efforts focused on achieving efficient and continuous physiological sensing with ubiquitous devices. Our goal is to provide new insights and innovative technological approaches within the realm of human-computer interaction for health.</p>
-          <p style="text-align: justify;"><b><strong>Bio</strong>:</b> Yuntao Wang serves as an Associate Professor (Research Track) in the Department of Computer Science and Technology at Tsinghua University in Beijing, China. He is a key member of the Pervasive Interaction Lab, where his research focuses on Human-Computer Interaction (HCI) and Ubiquitous Computing. Dr. Wang specializes on efficient behavioral computing and interaction intention inference on edge devices. He has published more than 70 conference or journal papers including top-tier venues like CHI, IMWUT, UIST and NeurIPS, with seven of these papers earning best paper or honorable mentioned awards. Dr. Wang's research work has been recognized by the Young Elite Scientists Sponsorship Program by the China Association for Science and Technology (CAST) in 2022, the First Prize of Science and Technology Award of the Chinese Institute of Electronics (CIE) in 2019, the Excellent Innovation Award of the Chinese Association of Artificial Intelligence (CAAI) in 2021. More info <a href="https://pi.cs.tsinghua.edu.cn/lab/people/YuntaoWang/en/">here</a></p>
+        <div class="panel-grid">
+          <div class="panelist">
+            <img src="./assets/images/edisonthomaz.jpeg" alt="Edison Thomaz" width="180" height="180" loading="lazy" />
+            <p class="panelist-name"><a href="https://users.ece.utexas.edu/~ethomaz/" target="_blank" rel="noopener">Edison Thomaz</a></p>
+            <p class="panelist-affiliation">UT Austin</p>
+          </div>
 
+          <div class="panelist">
+            <img src="./assets/images/uichinlee.jpg" alt="Uichin Lee" width="180" height="180" loading="lazy" />
+            <p class="panelist-name"><a href="https://ic.kaist.ac.kr/" target="_blank" rel="noopener">Uichin Lee</a></p>
+            <p class="panelist-affiliation">KAIST</p>
+          </div>
+
+          <div class="panelist">
+            <img src="./assets/images/yuntaowang.png" alt="Yuntao Wang" width="180" height="180" loading="lazy" />
+            <p class="panelist-name"><a href="https://pi.cs.tsinghua.edu.cn/lab/people/YuntaoWang/" target="_blank" rel="noopener">Yuntao Wang</a></p>
+            <p class="panelist-affiliation">Tsinghua University</p>
+          </div>
+
+          <div class="panelist">
+            <img src="./assets/images/tongxia.png" alt="Tong Xia" width="180" height="180" loading="lazy" />
+            <p class="panelist-name"><a href="https://vsph.tsinghua.edu.cn/en/info/1010/1884.htm" target="_blank" rel="noopener">Tong Xia</a></p>
+            <p class="panelist-affiliation">Tsinghua University</p>
+          </div>
         </div>
-      </div>
--->
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <p>WellComp 2026 · Workshop at <a href="https://ubicomp.org/ubicomp-iswc-2026/" target="_blank" rel="noopener">UbiComp/ISWC 2026</a>, Shanghai, China</p>
+      <p>Questions? <a href="mailto:gauthamkrishna@utexas.edu">gauthamkrishna@utexas.edu</a></p>
+    </footer>
+  
   </body> 
 </html>
